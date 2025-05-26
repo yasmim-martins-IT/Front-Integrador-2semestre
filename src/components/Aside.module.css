@@ -1,13 +1,44 @@
-.container {
-    border : solid , 3px ;
-    border-color: #3A9EDD ;
-    overflow: hidden;
-    display: grid;
-    justify-content: center;
-    height: 100%;
-    width: 250px;
+.container{
+    background-color: wheat;
+    border-radius: 10px;
+    overflow: hidden;}
+
+.containerUsuario{
+        text-align: center;
+        margin: -50px 0px;
+    }
+.fotoUsuario{
+        width : 90px;
+        height: 90px;
+        border : 2px solid var(--dark-strong-blue);
+        border-radius: 10px;
+        margin-bottom: 10px;
+
+    }
+.nomeUsuario {
+        color: black;
+        margin-bottom: 90px;
+    }
+.containerBotoes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
-img {
-    width : 200px;
-    height: 200px;
+.botao {
+        background-color: var(--baby-blue);
+        width: 160px;
+        height: 50px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+.botao:hover{
+    background-color: var(--ocean-blue);
+    color: var(--white);
+    cursor: pointer;
+}
+.icone{
+    margin-right: 6px;
 }

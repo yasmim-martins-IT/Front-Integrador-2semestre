@@ -1,10 +1,9 @@
 import React from 'react';
 import styles from './Footer.module.css';
 import { FaFacebookF, FaLinkedinIn, FaTelegramPlane, FaInstagram, FaGithub, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-
-export function Footer() {
-  return (
-    <footer className={styles.footer}>
+export function Footer(){
+    return(
+       <footer className={styles.footer}>
       <div className={styles.footer_content}>
         <div className={styles.footer_info}>
           <h3>ENTRE EM CONTATO CONOSCO</h3>
@@ -32,9 +31,6 @@ export function Footer() {
       </div>
 
       <div className={styles.footer_wave}></div>
-      <div className={styles.footer_wave}></div>
     </footer>
-  );
-}
-
-export default Footer;
+    )
+};

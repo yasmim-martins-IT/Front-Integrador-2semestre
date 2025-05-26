@@ -1,0 +1,14 @@
+.container {
+    padding: '8px';
+    width: '250px';
+    margin-bottom : '20px' ; 
+    display: flex;
+    width: 2000px;
+    align-items: center;
+    justify-content: center;
+    
+}
+input {
+    background-color: #D9D9D9;
+    width: 400px;
+}

@@ -1,0 +1,13 @@
+.container {
+    border : solid , 3px ;
+    border-color: #3A9EDD ;
+    overflow: hidden;
+    display: grid;
+    justify-content: center;
+    height: 100%;
+    width: 250px;
+}
+img {
+    width : 200px;
+    height: 200px;
+}

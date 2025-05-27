@@ -1,31 +1,32 @@
 .container{
-    background-color: wheat;
+    border: solid , 2px;
+    border-color: #3b8ee4;
     border-radius: 10px;
-    overflow: hidden;}
+    overflow: hidden;
+    height: 800px;
+
+}
 
 .containerUsuario{
         text-align: center;
-        margin: -50px 0px;
     }
 .fotoUsuario{
-        width : 90px;
-        height: 90px;
+        width : 200px;
+        height: 200px;
         border : 2px solid var(--dark-strong-blue);
         border-radius: 10px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
 
     }
-.nomeUsuario {
-        color: black;
-        margin-bottom: 90px;
-    }
+
 .containerBotoes {
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 25px;
 }
 .botao {
-        background-color: var(--baby-blue);
+        color: black;
         width: 160px;
         height: 50px;
         border-radius: 10px;
@@ -33,12 +34,31 @@
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
+        font-size: 20px;
     }
 .botao:hover{
-    background-color: var(--ocean-blue);
-    color: var(--white);
     cursor: pointer;
 }
-.icone{
-    margin-right: 6px;
+.links_container {
+  display: flex;
+  gap: 10px;
 }
+
+.container-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+  align-items: center;
+}
+
+.icone {
+  color: rgb(0, 0, 0);
+
+}
+
+.container_links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+

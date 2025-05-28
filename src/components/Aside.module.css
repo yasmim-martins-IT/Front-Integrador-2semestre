@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 25px;
+    gap: 0px;
 }
 .botao {
         color: black;
@@ -41,14 +41,20 @@
 }
 .links_container {
   display: flex;
-  gap: 10px;
+padding-left: 20px;
+  flex-direction: row; /* Alinha em linha, lado a lado */
+  gap: -30px; /* Diminui a separação entre ícones e links */
+
+
 }
 
-.container-icons {
+.container_icons {
   display: flex;
   flex-direction: column;
-  gap: 55px;
-  align-items: center;
+  padding-top: 10px;
+  gap: 65px;
+  align-items: flex-start; /* Alinha os ícones no início */
+  padding-right: -50px;
 }
 
 .icone {
@@ -60,5 +66,6 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+
 }
 

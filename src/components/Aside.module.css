@@ -3,7 +3,8 @@
     border-color: #3b8ee4;
     border-radius: 10px;
     overflow: hidden;
-    height: 800px;
+    height: 1000px;
+    width: 200px;
 
 }
 
@@ -43,7 +44,7 @@
   display: flex;
 padding-left: 20px;
   flex-direction: row; /* Alinha em linha, lado a lado */
-  gap: -30px; /* Diminui a separação entre ícones e links */
+  gap: -70px; /* Diminui a separação entre ícones e links */
 
 
 }
@@ -69,3 +70,9 @@ padding-left: 20px;
 
 }
 
+.containerImagem {
+  padding-top: 140px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}

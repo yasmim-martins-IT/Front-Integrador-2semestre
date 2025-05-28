@@ -7,6 +7,7 @@ import { ImDroplet } from "react-icons/im";
 import {Link} from 'react-router' ; 
 import { BsLightbulb } from "react-icons/bs";
 import { CgNotes } from "react-icons/cg";
+import nuvem from '../assets/nuvem.svg'
 export function Aside(){
     return(
         <aside className={styles.container}>
@@ -41,6 +42,8 @@ export function Aside(){
                 </div>
                 
            </section>
+           <div className={styles.containerImagem}><img className={styles.nuvem} src={nuvem} alt="nuvem" height={250} width={200} /></div>
+           
         </aside>
     )
 };

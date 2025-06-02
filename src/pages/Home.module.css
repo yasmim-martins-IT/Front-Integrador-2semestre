@@ -1,0 +1,17 @@
+.texto {
+    width: 500px;
+    justify-items: center;
+    align-content: center;
+    font-size: 17px;
+}
+main{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    gap : 40px; 
+}

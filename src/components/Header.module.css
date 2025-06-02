@@ -1,6 +1,6 @@
 .header {
   display: flex;
-
+  justify-items: center;
   justify-content: space-between; /* espaço entre input e imagem */
   height: 100vh;                /* altura total da tela */
   padding: 0 20px;
@@ -10,14 +10,17 @@
 
 .container {
   position: absolute;
-  left: 50%;                   /* começa no meio da tela */
+  left: 55%;                   /* começa no meio da tela */
   transform: translateX(-50%); /* centraliza horizontalmente o input */
   width: 550px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .input {
+  justify-content: center;
+  justify-items: center;
   width: 100%;
   height: 30px;
   padding: 5px 30px 5px 10px; /* espaço pro ícone */

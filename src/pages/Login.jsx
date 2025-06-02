@@ -2,6 +2,8 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import styles from './Login.module.css';
+import logo from '../assets/Logo.png'
 
 const API_URL = import.meta.env.VITE_API_URL;
 
@@ -30,7 +32,9 @@ export function Login() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <div className={styles.container}>
+        <img className={styles.logo} src={logo} alt="logo" />
+    <form className={styles.formulario} onSubmit={handleSubmit}>
       <input
         type="username"
         placeholder="username"
@@ -45,7 +49,7 @@ export function Login() {
         onChange={(e) => setSenha(e.target.value)}
         required
       />
-      <button type="submit">Entrar</button>
-    </form>
+      <button className={styles.button} type="submit">Entrar</button>
+    </form> </div>
   );
 }

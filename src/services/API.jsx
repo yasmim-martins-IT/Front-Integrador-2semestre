@@ -1,15 +1,19 @@
-import {useState , useEffect} from "react";
-import axios from "axios" 
-const API_URL = process.env.REACT_APP_API_URL
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-export async function  getFunctionHistorico() {
-try{
-    const response = axios.get(`${API_URL}/visualizarHistorico/`);
-    
-    return response.data ; 
+const API_URL = import.meta.env.VITE_APP_API_URL;
 
-} catch(error) {
-    console.error("erro ao buscar os dados") ;
-    throw error ;
-}
+const api = axios.create({
+  baseURL: API_URL,
+});
+
+
+export async function getFunctionHistorico() {
+  try {
+    const response = await api.get('/visualizarHistorico/');
+    return response.data;
+  } catch (error) {
+    console.error('Erro ao buscar os dados:', error);
+    throw error;
+  }
 }

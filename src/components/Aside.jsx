@@ -4,7 +4,7 @@ import { FaChalkboardTeacher } from "react-icons/fa";
 import { FaTemperatureHalf } from "react-icons/fa6";
 import { RiHomeLine } from "react-icons/ri";
 import { ImDroplet } from "react-icons/im";
-import {Link} from 'react-router' ; 
+import {Link} from 'react-router-dom' ; 
 import { BsLightbulb } from "react-icons/bs";
 import { CgNotes } from "react-icons/cg";
 import nuvem from '../assets/nuvem.svg'
@@ -26,17 +26,17 @@ export function Aside(){
                         <FaTemperatureHalf className={styles.icone} size={30} />
                         <RiHomeLine className={styles.icone} size={30} />
                         <BsLightbulb className={styles.icone} size={30} />
-                        <CgNotes className={styles.icone} size={30} />
+                        <CgNotes className={styles.icone} size={31} />
                     </div>
 
                     <div className={styles.container_links}>
-                        <Link className={styles.botao} to={'/Umidade'}>
+                        <Link className={styles.botao} to={'umidade'}>
                             Umidade
                         </Link>
-                        <Link className={styles.botao} to={'/Iluminacao'}>Iluminação</Link>
-                        <Link className={styles.botao} to={'/Temperatura'}>Temperatura</Link>
-                        <Link className={styles.botao} to={'/Ambientes'}>Ambientes</Link>
-                        <Link className={styles.botao} to={'/Historico'}>Histórico</Link>
+                        <Link className={styles.botao} to={'/iluminacao'}>Iluminação</Link>
+                        <Link className={styles.botao} to={'/temperatura'}>Temperatura</Link>
+                        <Link className={styles.botao} to={'/ambientes'}>Ambientes</Link>
+                        <Link className={styles.botao} to={'/historico'}>Histórico</Link>
                     </div>
 
                 </div>

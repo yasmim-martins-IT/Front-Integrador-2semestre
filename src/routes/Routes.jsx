@@ -2,13 +2,15 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"; // use react-ro
 import { Initial } from "../pages/Initial";
 import { Home } from "../pages/Home";
 import {Historico} from "../pages/Historico" ;
+import { Login } from "../pages/Login";
 
 
 export function Routas() {
     return (
         <BrowserRouter>
             <Routes>
-                 <Route path="/" element={<Initial />}>
+                 <Route path="/" element={<Login />}>
+                 <Route path="/" element={<Initial/>}></Route>
           <Route index element={<Home />} />
             <Route path='historico' element={<Historico />} />
           

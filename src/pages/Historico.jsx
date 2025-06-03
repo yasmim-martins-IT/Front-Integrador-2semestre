@@ -1,6 +1,7 @@
 import styles from "./Historico.module.css";
 import { useEffect, useState } from "react";
 import { getFunctionHistorico } from "../services/API";
+import { ChartCard } from "../components/Cards";
 
 export function Historico() {
   const [dados, setDados] = useState([]);
@@ -42,27 +43,34 @@ export function Historico() {
   return (
     <main className={styles.container}>
       <h1>Bem vindo ao Histórico</h1>
-
-      {showAlert && (
-        <div className={styles.alert}>
-          🔔 Erro ao buscar os dados!
-        </div>
-      )}
-
       {dados.length === 0 ? (
         <p>Nenhum dado encontrado.</p>
       ) : (
+        <div className={styles.infos}>
         <ul className={styles.lista}>
           {dados.map((item) => (
             <li key={item.id} className={styles.item}>
-              <strong>Sensor:</strong> {item.sensor} <br />
-              <strong>Ambiente:</strong> {item.ambiente} <br />
-              <strong>Valor:</strong> {item.valor} <br />
-              <strong>Timestamp:</strong> {item.timestamp} <br />
+              <strong className={styles.texto}>Sensor:</strong> {item.sensor} <br />
+              <strong className={styles.texto}>Ambiente:</strong> {item.ambiente} <br />
+              <strong className={styles.texto}>Valor:</strong> {item.valor} <br />
+              <strong className={styles.texto}>Timestamp:</strong> {item.timestamp} <br />
             </li>
           ))}
         </ul>
+        <div className={styles.graficos}>
+          <ChartCard title="Tempo ativo em horas" type="pie" />     
+        </div>
+        <div className={styles.graficos}>
+          <ChartCard title="Tempo ativo em horas" type="bar" />     
+        </div>
+             
+        </div>
+     
       )}
+        <div id={styles.graficoLine}>
+          <ChartCard title="Tempo ativo em horas" type="line" />     
+        </div>
+         
     </main>
   );
 }

@@ -29,7 +29,7 @@ export default api;
 
 export async function getFunctionHistorico() {
   try {
-    const response = await api.get(`/visualizarHistorico/`);
+    const response = await api.get(`http://127.0.0.1:8000/visualizarHistorico/`);
     return response.data;
   } catch (error) {
     console.error('Erro ao buscar os dados:', error);

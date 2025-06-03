@@ -24,8 +24,8 @@ export function Aside(){
                     <div className={styles.container_icons}>
                         <ImDroplet className={styles.icone} size={30} />
                         <FaTemperatureHalf className={styles.icone} size={30} />
-                        <RiHomeLine className={styles.icone} size={30} />
                         <BsLightbulb className={styles.icone} size={30} />
+                        <RiHomeLine className={styles.icone} size={30} />
                         <CgNotes className={styles.icone} size={31} />
                     </div>
 

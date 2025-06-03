@@ -17,6 +17,7 @@
     justify-content: center;
     align-items: center;
     justify-items: center;
+    padding-top: 70px;
 }
 .logo {
     height: 500px;
@@ -25,5 +26,12 @@
 .button {
   background-color: #3A9EDD;
   color: white;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
 
+}
+input{
+    width: 550px;
+    height: 30px;
 }

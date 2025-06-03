@@ -7,16 +7,13 @@ import { Login } from "../pages/Login";
 
 export function Routas() {
     return (
-        <BrowserRouter>
-            <Routes>
-                 <Route path="/" element={<Login />}>
-                 <Route path="/" element={<Initial/>}></Route>
-          <Route index element={<Home />} />
-            <Route path='historico' element={<Historico />} />
-          
-        </Route>
-            </Routes>
-        </BrowserRouter>
+   <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/initial" element={<Initial />}>
+        <Route index element={<Home />} />
+        <Route path="historico" element={<Historico />} />
+      </Route>
+    </Routes>
     );
 }
 

@@ -30,13 +30,13 @@ export function Aside(){
                     </div>
 
                     <div className={styles.container_links}>
-                        <Link className={styles.botao} to={'umidade'}>
+                        <Link className={styles.botao} to={'/umidade'}>
                             Umidade
                         </Link>
                         <Link className={styles.botao} to={'/iluminacao'}>Iluminação</Link>
                         <Link className={styles.botao} to={'/temperatura'}>Temperatura</Link>
                         <Link className={styles.botao} to={'/ambientes'}>Ambientes</Link>
-                        <Link className={styles.botao} to={'/historico'}>Histórico</Link>
+                        <Link className={styles.botao} to={'historico'}>Histórico</Link>
                     </div>
 
                 </div>

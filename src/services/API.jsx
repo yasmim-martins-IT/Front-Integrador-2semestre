@@ -1,7 +1,8 @@
-
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_APP_API_URL;
+// Certifique-se que no seu .env está:
+// VITE_API_URL=http://127.0.0.1:8000
+const API_URL = import.meta.env.VITE_API_URL;
 
 const api = axios.create({
   baseURL: API_URL,
@@ -23,9 +24,12 @@ api.interceptors.request.use(
 export default api;
 
 
+
+
+
 export async function getFunctionHistorico() {
   try {
-    const response = await api.get('/visualizarHistorico/');
+    const response = await api.get(`/visualizarHistorico/`);
     return response.data;
   } catch (error) {
     console.error('Erro ao buscar os dados:', error);

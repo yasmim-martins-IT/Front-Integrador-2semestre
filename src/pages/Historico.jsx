@@ -7,14 +7,6 @@ export function Historico() {
   const [dados, setDados] = useState([]);
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState(null);
-  const [showAlert, setShowAlert] = useState(false);
-
-  const handleShowAlert = () => {
-    setShowAlert(true);
-    setTimeout(() => {
-      setShowAlert(false);
-    }, 2000); // Fecha após 2 segundos
-  };
 
   useEffect(() => {
     async function carregandoDados() {
@@ -27,8 +19,7 @@ export function Historico() {
         }
       } catch (error) {
         console.error('Erro ao carregar dados:', error);
-        setErro('Erro ao carregar dados');
-        handleShowAlert();
+        
       } finally {
         setLoading(false);
       }
@@ -57,16 +48,16 @@ export function Historico() {
             </li>
           ))}
         </ul>
-        <div className={styles.graficos}>
-          <ChartCard title="Tempo ativo em horas" type="pie" />     
-        </div>
-        <div className={styles.graficos}>
-          <ChartCard title="Tempo ativo em horas" type="bar" />     
-        </div>
+        
              
         </div>
      
       )}
+       <div className={styles.graficos}>
+          <ChartCard title="Tempo ativo em horas" type="pie" />     
+          <ChartCard title="Tempo ativo em horas" type="bar" />     
+        </div>
+      
         <div id={styles.graficoLine}>
           <ChartCard title="Tempo ativo em horas" type="line" />     
         </div>

@@ -23,10 +23,6 @@ api.interceptors.request.use(
 
 export default api;
 
-
-
-
-
 export async function getFunctionHistorico() {
   try {
     const response = await api.get(`http://127.0.0.1:8000/visualizarHistorico/`);
@@ -34,5 +30,14 @@ export async function getFunctionHistorico() {
   } catch (error) {
     console.error('Erro ao buscar os dados:', error);
     throw error;
+  }
+}
+
+export async function getSensoresPorTipo(tipo){
+  try {
+    const response = await api.get(`http://127.0.0.1:8000/visualizarSensoresTipo/${tipo}/`);
+    return response.data
+  }catch(error) {
+    console.error('Erro ao buscar sensores pelo tipo' , error)
   }
 }

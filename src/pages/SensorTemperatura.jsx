@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getSensoresPorTipo } from '../services/API';
-import styles from './Sensor.module.css'; // Ajuste se o caminho do CSS for diferente
-import { ChartCard } from '../components/Cards'; // Ajuste se necessário
+import styles from './Sensor.module.css';
+import { ChartCard } from '../components/Cards';
 
 export function SensorTemperatura() {
   const [sensores, setSensores] = useState([]);
@@ -12,7 +12,7 @@ export function SensorTemperatura() {
     async function fetchData() {
       try {
         const response = await getSensoresPorTipo("temperatura");
-        setSensores(response || []); // Ajuste: se API retorna response.data
+        setSensores(response || []);
       } catch (error) {
         console.error("Erro ao buscar sensores pelo tipo", error);
         setErro(error);
@@ -29,40 +29,31 @@ export function SensorTemperatura() {
 
   return (
     <main className={styles.container}>
-      <h1>Bem vindo ao visualizador de Sensores de temperatura</h1>
+      <h1>Visualizador de Sensores de Umidade</h1>
 
       {sensores.length === 0 ? (
         <p>Nenhum dado encontrado.</p>
       ) : (
-        <div className={styles.infos}>
-          <ul className={styles.lista}>
-            {sensores.map((item) => (
-              <li key={item.id} className={styles.item}>
-                <div className={styles.infos}>
-                    <p><strong className={styles.texto}>Nome:{item.sensor} </strong>  </p>
-                    <p><strong className={styles.texto}>Tipo: {item.tipo} </strong></p> </div>
-                <div className={styles.infos}>    
-                    <p><strong className={styles.texto}>Latitude : {item.latitude} </strong> </p>
-                    <p><strong className={styles.texto}>Longitude: {item.longitude}</strong> </p>
-                
-                </div>
-                <div className={styles.infos}>
-                    <p><strong className={styles.texto}>Mac_adress: {item.mac_address} </strong> </p>
-                    <p><strong className={styles.texto}>Status: {item.status ? "Ativo" : "Inativo" } </strong></p>
-                </div>
-             
-                
-              </li>
-            ))}
-          </ul>
+        <div className={styles.grid}>
+          {sensores.map((item) => (
+            <div key={item.id} className={styles.card}>
+              <h2>{item.sensor}</h2>
+              <p><strong>Tipo:</strong> {item.tipo}</p>
+              <p><strong>Latitude:</strong> {item.latitude}</p>
+              <p><strong>Longitude:</strong> {item.longitude}</p>
+              <p><strong>MAC Address:</strong> {item.mac_address}</p>
+              <p><strong>Status:</strong> {item.status ? 'Ativo' : 'Inativo'}</p>
+            </div>
+          ))}
         </div>
       )}
-       <div className={styles.graficos}>
-                <ChartCard title="Tempo ativo em horas" type="pie" />     
-                <ChartCard title="Tempo ativo em horas" type="bar" />     
-        </div>
 
-      <div id={styles.graficoLine}>
+      <div className={styles.graficos}>
+        <ChartCard title="Tempo ativo em horas" type="pie" />
+        <ChartCard title="Tempo ativo em horas" type="bar" />
+      </div>
+
+      <div className={styles.graficoLine}>
         <ChartCard title="Tempo ativo em horas" type="line" />
       </div>
     </main>

@@ -23,7 +23,7 @@ api.interceptors.request.use(
 
 export default api;
 
-export async function getFunctionHistorico() {
+export async function getHistorico() {
   try {
     const response = await api.get(`http://127.0.0.1:8000/visualizarHistorico/`);
     return response.data;

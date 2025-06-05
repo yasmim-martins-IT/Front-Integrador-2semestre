@@ -1,67 +1,61 @@
-import styles from "./Historico.module.css";
-import { useEffect, useState } from "react";
-import { getFunctionHistorico } from "../services/API";
-import { ChartCard } from "../components/Cards";
+import { useEffect, useState } from 'react';
+import { getHistorico } from '../services/API';
+import styles from './Historico.module.css';
+import { ChartCard } from '../components/Cards';
 
 export function Historico() {
-  const [dados, setDados] = useState([]);
+  const [historicos, setHistoricos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState(null);
 
   useEffect(() => {
-    async function carregandoDados() {
+    async function fetchData() {
       try {
-        const resultado = await getFunctionHistorico();
-        if (Array.isArray(resultado)) {
-          setDados(resultado);
-        } else {
-          throw new Error('Os dados recebidos não são uma lista');
-        }
+        const response = await getHistorico();
+        setHistoricos(response || []);
       } catch (error) {
-        console.error('Erro ao carregar dados:', error);
-        
+        console.error("Erro ao buscar histórico", error);
+        setErro(error);
       } finally {
         setLoading(false);
       }
     }
 
-    carregandoDados();
+    fetchData();
   }, []);
 
-  if (loading) return <p>Carregando dados...</p>;
-  if (erro) return <p>{erro}</p>;
+  if (loading) return <p>Carregando histórico...</p>;
+  if (erro) return <p>Erro ao carregar histórico.</p>;
 
   return (
     <main className={styles.container}>
-      <h1>Bem vindo ao Histórico</h1>
-      {dados.length === 0 ? (
+      <h1>Visualizador de Histórico</h1>
+
+      {historicos.length === 0 ? (
         <p>Nenhum dado encontrado.</p>
       ) : (
-        <div className={styles.infos}>
-        <ul className={styles.lista}>
-          {dados.map((item) => (
-            <li key={item.id} className={styles.item}>
-              <strong className={styles.texto}>Sensor:</strong> {item.sensor} <br />
-              <strong className={styles.texto}>Ambiente:</strong> {item.ambiente} <br />
-              <strong className={styles.texto}>Valor:</strong> {item.valor} <br />
-              <strong className={styles.texto}>Timestamp:</strong> {item.timestamp} <br />
-            </li>
+        <div className={styles.grid}>
+          {historicos.map((item) => (
+            <div key={item.id} className={styles.card}>
+              <h2>{item.sensor}</h2>
+              <p><strong>Tipo:</strong> {item.tipo}</p>
+              <p><strong>Data:</strong> {item.data}</p>
+              <p><strong>Horário:</strong> {item.horario}</p>
+              <p><strong>Valor:</strong> {item.valor}</p>
+              <p><strong>Status:</strong> {item.status ? 'Ativo' : 'Inativo'}</p>
+            </div>
           ))}
-        </ul>
-        
-             
         </div>
-     
       )}
-       <div className={styles.graficos}>
-          <ChartCard title="Tempo ativo em horas" type="pie" />     
-          <ChartCard title="Tempo ativo em horas" type="bar" />     
-        </div>
-      
-        <div id={styles.graficoLine}>
-          <ChartCard title="Tempo ativo em horas" type="line" />     
-        </div>
-         
+
+      <div className={styles.graficos}>
+        <ChartCard title="Histórico por Tipo" type="pie" />
+        <ChartCard title="Histórico por Sensor" type="bar" />
+      </div>
+
+      <div className={styles.graficoLine}>
+        <ChartCard title="Histórico no Tempo" type="line" />
+      </div>
     </main>
   );
 }

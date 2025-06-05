@@ -14,8 +14,8 @@ export function Aside(){
         <aside className={styles.container}>
            <header>
                 <div className= {styles.containerUsuario}>
-                    <img className={styles.fotoUsuario} 
-                    src={logo}/>
+                    <Link to={''}>
+                    <img className={styles.fotoUsuario} src={logo}/></Link>
                 </div>
 
            </header>
@@ -37,7 +37,7 @@ export function Aside(){
                         </Link>
                         <Link className={styles.botao} to={'iluminacao'}>Iluminação</Link>
                         <Link className={styles.botao} to={'temperatura'}>Temperatura</Link>
-                        <Link className={styles.botao} to={'/ambientes'}>Contador</Link>
+                        <Link className={styles.botao} to={'contador'}>Contador</Link>
                         <Link className={styles.botao} to={'/ambientes'}>Ambientes</Link>
                         <Link className={styles.botao} to={'historico'}>Histórico</Link>
                     </div>

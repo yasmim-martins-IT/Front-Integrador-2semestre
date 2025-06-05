@@ -3,7 +3,7 @@ import { getSensoresPorTipo } from '../services/API';
 import styles from './Sensor.module.css';
 import { ChartCard } from '../components/Cards';
 
-export function SensorTemperatura() {
+export function SensorContador() {
   const [sensores, setSensores] = useState([]);
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState(null);
@@ -11,7 +11,7 @@ export function SensorTemperatura() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await getSensoresPorTipo("temperatura");
+        const response = await getSensoresPorTipo("contador");
         setSensores(response || []);
       } catch (error) {
         console.error("Erro ao buscar sensores pelo tipo", error);
@@ -29,7 +29,7 @@ export function SensorTemperatura() {
 
   return (
     <main className={styles.container}>
-      <h1>Visualizador de Sensores de Temperatura</h1>
+      <h1>Visualizador de Sensores de contador</h1>
 
       {sensores.length === 0 ? (
         <p>Nenhum dado encontrado.</p>

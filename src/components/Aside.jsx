@@ -38,7 +38,7 @@ export function Aside(){
                         <Link className={styles.botao} to={'iluminacao'}>Iluminação</Link>
                         <Link className={styles.botao} to={'temperatura'}>Temperatura</Link>
                         <Link className={styles.botao} to={'contador'}>Contador</Link>
-                        <Link className={styles.botao} to={'/ambientes'}>Ambientes</Link>
+                        <Link className={styles.botao} to={'ambiente'}>Ambientes</Link>
                         <Link className={styles.botao} to={'historico'}>Histórico</Link>
                     </div>
 

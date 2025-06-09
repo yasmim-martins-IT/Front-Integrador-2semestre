@@ -7,6 +7,7 @@ import { SensorTemperatura } from "../pages/SensorTemperatura";
 import { SensorUmidade } from "../pages/SensorUmidade";
 import { SensorLuminosidade } from "../pages/SensorLuminosidade";
 import { SensorContador } from "../pages/SensorContador";
+import { Ambientes } from "../pages/Ambientes";
 
 export function Routas() {
     return (
@@ -19,6 +20,7 @@ export function Routas() {
         <Route path = "Umidade" element = {<SensorUmidade/>}/>
         <Route path = "Iluminacao" element = {<SensorLuminosidade/>}/>
         <Route path = "contador" element = {<SensorContador/>}/>
+        <Route path = "ambiente" element = {<Ambientes/>}/>
       </Route>
     </Routes>
     );

@@ -41,3 +41,12 @@ export async function getSensoresPorTipo(tipo){
     console.error('Erro ao buscar sensores pelo tipo' , error)
   }
 }
+
+export async function getAmbientes() {
+  try {
+    const response = await api.get(`http://127.0.0.1:8000/visualizarAmbiente/`);
+    return response.data
+  } catch(error) {
+    console.error('Erro ao buscar dados: ' , error)
+  }
+}

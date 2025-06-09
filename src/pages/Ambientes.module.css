@@ -1,0 +1,42 @@
+.container {
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 4fr); /* Duas colunas fixas */
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Em telas pequenas, vira uma coluna */
+  }
+}
+
+.card {
+  background-color: #f8f9fa;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.card p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}

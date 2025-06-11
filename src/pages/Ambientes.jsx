@@ -36,11 +36,10 @@ export function Ambientes() {
               {ambientes.map((item) => (
                 <div key={item.id} className={styles.card}>
                   <h2>{item.sensor}</h2>
-                  <p><strong>Sig:</strong> {item.sig}</p>
-                  <p><strong>Descrição:</strong> {item.ni}</p>
-                  <p><strong>Ni:</strong> {item.longitude}</p>
+                  <h2><strong>Sig:</strong> {item.sig}</h2>
+                  <p><strong>Descrição:</strong> {item.descricao}</p>
+                  <p><strong>Ni:</strong> {item.ni}</p>
                   <p><strong>Responsavel:</strong> {item.responsavel}</p>
-
                 </div>
               ))}
             </div>

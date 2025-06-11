@@ -50,3 +50,24 @@ export async function getAmbientes() {
     console.error('Erro ao buscar dados: ' , error)
   }
 }
+
+export async function deleteSensor(id) {
+  try{
+    const response = await api.delete(`http://127.0.0.1:8000/deleteSensor/${id}`) ;
+    return response.data
+  }
+  catch(error) {
+    console.error('Erro ao deletar objeto: ', error)
+  }
+  
+}
+
+
+export async function criarSensor(dados) {
+  try{
+  const response = await api.post('http://127.0.0.1:8000/criarSensor/', dados);
+  return response.data;}
+  catch(error) {
+    console.error('Erro ao criar sensor', error)
+  }
+}

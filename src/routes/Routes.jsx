@@ -8,6 +8,8 @@ import { SensorUmidade } from "../pages/SensorUmidade";
 import { SensorLuminosidade } from "../pages/SensorLuminosidade";
 import { SensorContador } from "../pages/SensorContador";
 import { Ambientes } from "../pages/Ambientes";
+import { CadastroSensor } from "../pages/CadastroSensor";
+import { CadastroAmbiente } from "../pages/CadastroAmbientes";
 
 export function Routas() {
     return (
@@ -21,6 +23,8 @@ export function Routas() {
         <Route path = "Iluminacao" element = {<SensorLuminosidade/>}/>
         <Route path = "contador" element = {<SensorContador/>}/>
         <Route path = "ambiente" element = {<Ambientes/>}/>
+        <Route path = "cadastroSensor" element = {<CadastroSensor/>}/>
+        <Route path = "cadastroAmbientes" element = {<CadastroAmbiente/>}/>
       </Route>
     </Routes>
     );

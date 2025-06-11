@@ -2,11 +2,14 @@ import { useEffect, useState } from 'react';
 import { getSensoresPorTipo, deleteSensor } from '../services/API';
 import styles from './Sensor.module.css';
 import { ChartCard } from '../components/Cards';
+import { useNavigate } from 'react-router-dom'; // corrigido para react-router-dom
 
 export function SensorLuminosidade() {
   const [sensores, setSensores] = useState([]);
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState(null);
+
+  const navigate = useNavigate(); // declarar navigate
 
   useEffect(() => {
     async function fetchData() {
@@ -23,7 +26,8 @@ export function SensorLuminosidade() {
 
     fetchData();
   }, []);
-    async function deletarSensor(id) {
+
+  async function deletarSensor(id) {
     try {
       await deleteSensor(id);
       setSensores((prevSensores) => prevSensores.filter(sensor => sensor.id !== id));
@@ -33,12 +37,19 @@ export function SensorLuminosidade() {
     }
   }
 
+  function irParaCadastro() {
+    navigate('/initial/cadastroSensor');
+  }
+
   if (loading) return <p>Carregando sensores...</p>;
   if (erro) return <p>Erro ao carregar sensores.</p>;
 
   return (
     <main className={styles.container}>
       <h1>Visualizador de Sensores de Luminosidade</h1>
+      <button onClick={irParaCadastro} className={styles.botao_cadastro}>
+        Cadastrar Novo Sensor
+      </button>
 
       {sensores.length === 0 ? (
         <p>Nenhum dado encontrado.</p>

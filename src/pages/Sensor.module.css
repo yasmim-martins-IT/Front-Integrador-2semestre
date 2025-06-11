@@ -1,5 +1,6 @@
 .container {
   padding: 20px;
+  padding-top: 80px;
 }
 
 h1 {
@@ -65,4 +66,19 @@ h1 {
 
 .botao:hover {
   background-color: #c62828;     /* vermelho mais escuro */
+}
+.botao_cadastro{
+    background-color:#428CE2;     /* vermelho */
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 30px;
+
+}
+.botao_cadastro:hover {
+  background-color: #005ab9;
 }

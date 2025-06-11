@@ -2,11 +2,13 @@ import { useState , useEffect } from 'react'
 import styles from './Ambientes.module.css'
 import { getAdapter } from 'axios'
 import { getAmbientes } from '../services/API'
+import { useNavigate } from 'react-router-dom' ;
 
 export function Ambientes() {
     const [ambientes , setAmbientes] = useState ([])
     const [loading , setLoading] = useState(true)
     const [erro , setErro] = useState(null)
+    const navigate = useNavigate();
 
      useEffect(() => {
         async function fetchData() {
@@ -23,11 +25,18 @@ export function Ambientes() {
         
     fetchData();
   }, []);
+    function irParaCadastro() {
+    navigate('/initial/cadastroAmbientes');
+    }
+  
 
 
   return(
      <main className={styles.container}>
-          <h1>Visualizador de Sensores de Luminosidade</h1>
+          <h1>Visualizador de Ambientes</h1>
+            <button onClick={irParaCadastro} className={styles.botao_cadastro}>
+                  Cadastrar Novo Ambiente
+                </button>
     
           {ambientes.length === 0 ? (
             <p>Nenhum dado encontrado.</p>

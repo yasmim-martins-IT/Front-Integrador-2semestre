@@ -30,6 +30,7 @@ export function Historico() {
   return (
     <main className={styles.container}>
       <h1>Visualizador de Histórico</h1>
+     
 
       {historicos.length === 0 ? (
         <p>Nenhum dado encontrado.</p>

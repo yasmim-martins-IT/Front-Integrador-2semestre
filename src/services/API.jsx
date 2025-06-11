@@ -66,8 +66,18 @@ export async function deleteSensor(id) {
 export async function criarSensor(dados) {
   try{
   const response = await api.post('http://127.0.0.1:8000/criarSensor/', dados);
-  return response.data;}
+  return response.data;
+}
   catch(error) {
     console.error('Erro ao criar sensor', error)
+  }
+}
+export async function cadastrarAmbiente(dados) {
+  try{
+    const response = await api.post('http://127.0.0.1:8000/criarAmbiente/', dados)
+    return response.data ;
+  }
+  catch(error) {
+    console.error('Error ao criar ambiente', error)
   }
 }

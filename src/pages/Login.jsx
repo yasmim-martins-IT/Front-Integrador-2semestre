@@ -32,7 +32,7 @@ export function Login() {
           Nome de usuário:
           <input
             type="text"
-            placeholder="Username"
+            placeholder="Digite seu nome de usuário"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             required
@@ -43,7 +43,7 @@ export function Login() {
           Senha:
           <input
             type="password"
-            placeholder="Senha"
+            placeholder="Digite sua senha"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
             required

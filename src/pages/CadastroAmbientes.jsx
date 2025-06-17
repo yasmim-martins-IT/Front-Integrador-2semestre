@@ -77,8 +77,9 @@ export function CadastroAmbiente() {
             required
           />
         </label>
-
-        <button type="submit" >Cadastrar</button>
+         <div className={styles.botaoContainer}>
+            <button  className={styles.button} type="submit" >Cadastrar</button>
+        </div>
 
         {mensagem && <p className={styles.mensagem}>{mensagem}</p>}
       </form>

@@ -89,8 +89,6 @@ export function Historico() {
             return (
               <div key={item.id} className={styles.card}>
                 <h2>{item.sensor.sensor}</h2>
-                <p><strong>Tipo:</strong> {item.sensor.tipo}</p>
-                <p><strong>Ambiente:</strong> {item.ambiente.nome}</p>
                 <p><strong>Data:</strong> {data}</p>
                 <p><strong>Horário:</strong> {horario}</p>
                 <p><strong>Valor:</strong> {item.valor}</p>

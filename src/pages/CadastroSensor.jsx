@@ -102,9 +102,9 @@ export function CadastroSensor() {
           <option value="false">Inativo</option>
             </select>
         </label>
-
+        <div className={styles.botaoContainer}>
         <button type="submit" className={styles.button}>Cadastrar</button>
-        {mensagem && <p className={styles.mensagem}>{mensagem}</p>}
+        {mensagem && <p className={styles.mensagem}>{mensagem}</p>} </div>
       </form>
     </div>
   );

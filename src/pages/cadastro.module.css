@@ -65,3 +65,8 @@ button:hover {
   text-align: center;
   color: red;
 }
+.botaoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

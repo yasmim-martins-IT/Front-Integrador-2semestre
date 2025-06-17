@@ -8,10 +8,17 @@ main{
     align-items: center;
     justify-content: center;
     justify-items: center;
+    gap: 50px;
 }
 .conteudo {
+    border: solid 1px #007bff;
+    width: 1000px;
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
+    padding-top: 30px;
     gap : 40px; 
+    border-radius: 1%;
+    
+    
 }
+

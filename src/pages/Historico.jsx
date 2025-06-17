@@ -99,14 +99,6 @@ export function Historico() {
         </div>
       )}
 
-      <div className={styles.graficos}>
-        <ChartCard title="Histórico por Tipo" type="pie" />
-        <ChartCard title="Histórico por Sensor" type="bar" />
-      </div>
-
-      <div className={styles.graficoLine}>
-        <ChartCard title="Histórico no Tempo" type="line" />
-      </div>
     </main>
   );
 }

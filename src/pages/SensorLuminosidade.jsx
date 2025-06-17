@@ -56,7 +56,12 @@ export function SensorLuminosidade() {
       ) : (
         <div className={styles.grid}>
           {sensores.map((item) => (
-            <div key={item.id} className={styles.card}>
+              <div
+                  key={item.id}
+                  className={styles.card}
+                  onClick={() => navigate(`/initial/graficos/${item.id}`)} // Redireciona para página de gráficos
+                  style={{ cursor: 'pointer' }}
+              >
               <h2>{item.sensor}</h2>
               <p><strong>Tipo:</strong> {item.tipo}</p>
               <p><strong>Latitude:</strong> {item.latitude}</p>

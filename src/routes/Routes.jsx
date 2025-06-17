@@ -10,6 +10,7 @@ import { SensorContador } from "../pages/SensorContador";
 import { Ambientes } from "../pages/Ambientes";
 import { CadastroSensor } from "../pages/CadastroSensor";
 import { CadastroAmbiente } from "../pages/CadastroAmbientes";
+import { PaginaGraficos } from "../pages/Graficos";
 
 export function Routas() {
     return (
@@ -25,6 +26,7 @@ export function Routas() {
         <Route path = "ambiente" element = {<Ambientes/>}/>
         <Route path = "cadastroSensor" element = {<CadastroSensor/>}/>
         <Route path = "cadastroAmbientes" element = {<CadastroAmbiente/>}/>
+        <Route path="graficos/:id" element={<PaginaGraficos />} />
       </Route>
     </Routes>
     );

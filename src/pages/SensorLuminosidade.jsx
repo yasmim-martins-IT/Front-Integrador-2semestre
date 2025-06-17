@@ -46,7 +46,7 @@ export function SensorLuminosidade() {
 
   return (
     <main className={styles.container}>
-      <h1>Visualizador de Sensores de Luminosidade</h1>
+      <h1>LUMINOSIDADE</h1>
       <button onClick={irParaCadastro} className={styles.botao_cadastro}>
         Cadastrar Novo Sensor
       </button>

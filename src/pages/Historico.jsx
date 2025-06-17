@@ -55,7 +55,7 @@ export function Historico() {
 
   return (
     <main className={styles.container}>
-      <h1>Visualizador de Histórico</h1>
+      <h1>HISTÓRICO</h1>
 
       <section className={styles.filtros}>
         <label>
@@ -88,7 +88,7 @@ export function Historico() {
 
             return (
               <div key={item.id} className={styles.card}>
-                <h2>{item.sensor.sensor}</h2>
+                <h2>id sensor: {item.sensor}</h2>
                 <p><strong>Data:</strong> {data}</p>
                 <p><strong>Horário:</strong> {horario}</p>
                 <p><strong>Valor:</strong> {item.valor}</p>

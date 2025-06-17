@@ -46,7 +46,7 @@ export function SensorContador() {
 
   return (
     <main className={styles.container}>
-      <h1>Visualizador de Sensores de contador</h1>
+      <h1>CONTADOR</h1>
       <button onClick={irParaCadastro} className={styles.botao_cadastro}>
         Cadastrar Novo Sensor
       </button>

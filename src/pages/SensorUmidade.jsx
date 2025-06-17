@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { getSensoresPorTipo, deleteSensor } from '../services/API';
 import styles from './Sensor.module.css';
-import { ChartCard } from '../components/Cards';
 import { useNavigate } from 'react-router-dom';
 
 export function SensorUmidade() {
@@ -9,7 +8,7 @@ export function SensorUmidade() {
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState(null);
 
-  const navigate = useNavigate(); // <-- Aqui
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function fetchData() {
@@ -46,7 +45,7 @@ export function SensorUmidade() {
 
   return (
     <main className={styles.container}>
-      <h1>Visualizador de Sensores de Umidade</h1>
+      <h1>UMIDADE</h1>
       <button onClick={irParaCadastro} className={styles.botao_cadastro}>
         Cadastrar Novo Sensor
       </button>
@@ -56,19 +55,31 @@ export function SensorUmidade() {
       ) : (
         <div className={styles.grid}>
           {sensores.map((item) => (
-            <div key={item.id} className={styles.card}>
+            <div
+              key={item.id}
+              className={styles.card}
+              onClick={() => navigate(`/initial/graficos/${item.id}`)} // Redireciona para página de gráficos
+              style={{ cursor: 'pointer' }}
+            >
               <h2>{item.sensor}</h2>
               <p><strong>Tipo:</strong> {item.tipo}</p>
               <p><strong>Latitude:</strong> {item.latitude}</p>
               <p><strong>Longitude:</strong> {item.longitude}</p>
               <p><strong>MAC Address:</strong> {item.mac_address}</p>
               <p><strong>Status:</strong> {item.status ? 'Ativo' : 'Inativo'}</p>
-              <button className={styles.botao} onClick={() => deletarSensor(item.id)}>Deletar</button>
+              <button
+                className={styles.botao}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  deletarSensor(item.id);
+                }}
+              >
+                Deletar
+              </button>
             </div>
           ))}
         </div>
       )}
-
     </main>
   );
 }

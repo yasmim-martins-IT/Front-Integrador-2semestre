@@ -100,3 +100,7 @@ export async function getHistoricoPorData(data) {
     throw error;
   }
 }
+export async function getSensorPorId(id) {
+  const response = await api.get(`http://127.0.0.1:8000/visualizarSensorId/${id}`);
+  return response.data;
+}

@@ -17,11 +17,11 @@ import {
 import styles from './Cards.module.css';
 
 const blue = '#3A9EDD';
-const blue_strong = '#428CE2' ; 
+const blue_strong = '#428CE2';
 const black = '#000';
 
-export function ChartCard({ title, type = 'line' }) {
-  const sampleData = [
+export function ChartCard({ title, type = 'line', data }) {
+  const chartData = data || [
     { name: 'Jan', value: 30 },
     { name: 'Feb', value: 20 },
     { name: 'Mar', value: 40 },
@@ -30,18 +30,16 @@ export function ChartCard({ title, type = 'line' }) {
     { name: 'Jun', value: 45 },
   ];
 
-  const pieData = [
-    { name: 'A', value: 40 },
-    { name: 'B', value: 30 },
-    { name: 'C', value: 20 },
-    { name: 'D', value: 10 },
-  ];
+  const pieData = chartData.map(item => ({
+    name: item.name,
+    value: item.value,
+  }));
 
   const renderChart = () => {
     switch (type) {
       case 'line':
         return (
-          <LineChart data={sampleData}>
+          <LineChart data={chartData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
@@ -51,7 +49,7 @@ export function ChartCard({ title, type = 'line' }) {
         );
       case 'bar':
         return (
-          <BarChart data={sampleData}>
+          <BarChart data={chartData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
@@ -61,7 +59,7 @@ export function ChartCard({ title, type = 'line' }) {
         );
       case 'area':
         return (
-          <AreaChart data={sampleData}>
+          <AreaChart data={chartData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />

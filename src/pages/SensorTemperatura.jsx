@@ -47,7 +47,7 @@ function irParaCadastro() {
 
   return (
     <main className={styles.container}>
-      <h1>Visualizador de Sensores de Temperatura</h1>
+      <h1>TEMPERATURA</h1>
       <div>
             <button onClick={irParaCadastro} className={styles.botao_cadastro}>
         Cadastrar Novo Sensor

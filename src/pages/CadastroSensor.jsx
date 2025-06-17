@@ -62,12 +62,12 @@ export function CadastroSensor() {
       <form onSubmit={handleSubmit} className={styles.form}>
         <label>
           Nome do Sensor:
-          <input type="text" name="sensor" value={form.sensor} onChange={handleChange} required />
+          <input placeholder='Digite o nome do sensor' type="text" name="sensor" value={form.sensor} onChange={handleChange} required />
         </label>
 
         <label>
           Tipo:
-          <select name="tipo" value={form.tipo} onChange={handleChange}>
+          <select placeholder = 'Escolha uma opção' name="tipo" value={form.tipo} onChange={handleChange}>
             <option value="temperatura">Temperatura</option>
             <option value="umidade">Umidade</option>
             <option value="luminosidade">Luminosidade</option>
@@ -77,27 +77,27 @@ export function CadastroSensor() {
 
         <label>
           MAC Address:
-          <input type="text" name="mac_address" value={form.mac_address} onChange={handleChange} required />
+          <input placeholder='Digite o Mac Address' type="text" name="mac_address" value={form.mac_address} onChange={handleChange} required />
         </label>
 
         <label>
           Unidade de Medida:
-          <input type="text" name="unidade_med" value={form.unidade_med} onChange={handleChange} required />
+          <input placeholder='Digite qual a unidade de medida' type="text" name="unidade_med" value={form.unidade_med} onChange={handleChange} required />
         </label>
 
         <label>
           Latitude:
-          <input type="text" name="latitude" value={form.latitude} onChange={handleChange} required />
+          <input placeholder='Digite a latitude' type="text" name="latitude" value={form.latitude} onChange={handleChange} required />
         </label>
 
         <label>
           Longitude:
-          <input type="number" step="any" name="longitude" value={form.longitude} onChange={handleChange} required />
+          <input placeholder='Digite a longitude' type="number" step="any" name="longitude" value={form.longitude} onChange={handleChange} required />
         </label>
 
         <label>
           Ativo:
-          <select  name="status" checked={form.status} onChange={handleChange} >
+          <select placeholder='Escolha uma opção'  name="status" checked={form.status} onChange={handleChange} >
            <option value="true">Ativo</option>
           <option value="false">Inativo</option>
             </select>

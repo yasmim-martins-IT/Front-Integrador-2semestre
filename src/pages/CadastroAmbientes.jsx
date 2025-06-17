@@ -37,6 +37,7 @@ export function CadastroAmbiente() {
         <label>
           Sig (código único):
           <input
+          placeholder='Digite o sig'
             type="number"
             value={sig}
             onChange={(e) => setSig(e.target.value)}
@@ -47,6 +48,7 @@ export function CadastroAmbiente() {
         <label>
           Descrição:
           <input
+          placeholder='Insira a descrição'
             type="text"
             value={descricao}
             onChange={(e) => setDescricao(e.target.value)}
@@ -57,6 +59,7 @@ export function CadastroAmbiente() {
         <label>
           NI:
           <input
+          placeholder='Insira o NI do ambiente'
             type="text"
             value={ni}
             onChange={(e) => setNi(e.target.value)}
@@ -67,6 +70,7 @@ export function CadastroAmbiente() {
         <label>
           Responsável:
           <input
+          placeholder='Insira o responsavel pelo o ambiente'
             type="text"
             value={responsavel}
             onChange={(e) => setResponsavel(e.target.value)}

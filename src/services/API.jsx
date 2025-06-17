@@ -81,3 +81,22 @@ export async function cadastrarAmbiente(dados) {
     console.error('Error ao criar ambiente', error)
   }
 }
+export async function getHistoricoPorID(id) {
+  try {
+    const response = await api.get(`http://127.0.0.1:8000/visualizarHistorico/${id}/`);
+    return response.data;
+  } catch (error) {
+    console.error('Erro ao buscar histórico por ID:', error);
+    throw error;
+  }
+}
+
+export async function getHistoricoPorData(data) {
+  try {
+    const response = await api.get(`http://127.0.0.1:8000/visualizarHistorico/data/${data}/`);
+    return response.data;
+  } catch (error) {
+    console.error('Erro ao buscar histórico por data:', error);
+    throw error;
+  }
+}

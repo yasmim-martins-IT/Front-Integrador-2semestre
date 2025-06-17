@@ -69,14 +69,6 @@ export function SensorUmidade() {
         </div>
       )}
 
-      <div className={styles.graficos}>
-        <ChartCard title="Tempo ativo em horas" type="pie" />
-        <ChartCard title="Tempo ativo em horas" type="bar" />
-      </div>
-
-      <div className={styles.graficoLine}>
-        <ChartCard title="Tempo ativo em horas" type="line" />
-      </div>
     </main>
   );
 }

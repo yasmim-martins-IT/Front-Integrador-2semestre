@@ -52,3 +52,38 @@ h1 {
 .graficoLine {
   margin-top: 20px;
 }
+.filtros {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* se quiser que quebre em telas pequenas */
+}
+
+.filtros label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  width: 150px; /* largura fixa para labels */
+}
+
+.filtros input[type="date"],
+.filtros input[type="number"] {
+  padding: 6px 8px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 4px;
+  width: 100%; /* para ocupar a largura da label */
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.filtros input[type="date"]:focus,
+.filtros input[type="number"]:focus {
+  border-color: #3a9edd;
+  outline: none;
+}

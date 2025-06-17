@@ -33,10 +33,6 @@ export function Header() {
           </svg>
         </i>
       </div>
-
-      <div className={styles.containerImagem}>
-        <img className={styles.nuvem} src={nuvem} alt="nuvem" />
-      </div>
     </header>
   );
 }

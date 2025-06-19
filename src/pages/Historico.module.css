@@ -71,7 +71,7 @@ h1 {
   display: flex;
   flex-direction: column;
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   color: #333;
   width: 150px; /* largura fixa para labels */
 }

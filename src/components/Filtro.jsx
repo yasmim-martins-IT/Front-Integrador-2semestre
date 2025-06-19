@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { getHistoricoPorID, getHistoricoPorData } from '../services/API';
+import { getHistoricoPorID, getHistoricoPorData } from '../services/API'; //pega as funções que consomem a API
 import styles from './Historico.module.css';
 
 export function HistoricoFiltro() {
+  //componente de filtro para a página de histórico
   const [id, setId] = useState('');
   const [data, setData] = useState('');
   const [result, setResult] = useState(null);
@@ -11,7 +12,7 @@ export function HistoricoFiltro() {
   async function buscarPorID() {
     setError('');
     try {
-      const res = await getHistoricoPorID(id);
+      const res = await getHistoricoPorID(id); //busca o historico pelo id utilizando a função pre-definida em '../services/API.jsx'
       setResult(res);
     } catch {
       setError('Erro ao buscar histórico por ID');
@@ -21,7 +22,7 @@ export function HistoricoFiltro() {
   async function buscarPorData() {
     setError('');
     try {
-      const res = await getHistoricoPorData(data);
+      const res = await getHistoricoPorData(data); //busca histório pela data utlizando a função pré-definida em '../services/API.jsx'
       setResult(res);
     } catch {
       setError('Erro ao buscar histórico por data');
@@ -29,11 +30,13 @@ export function HistoricoFiltro() {
   }
 
   return (
+    // elemento de filtro
     <div className={styles.container}>
       <h2>Buscar Histórico</h2>
       
       <div>
         <label>ID do Histórico:</label>
+        {/* Input para colocar o id */}
         <input
           type="number"
           value={id}
@@ -44,6 +47,7 @@ export function HistoricoFiltro() {
       </div>
 
       <div>
+        {/* Input para colocar a data */}
         <label>Data (YYYY-MM-DD):</label>
         <input
           type="date"

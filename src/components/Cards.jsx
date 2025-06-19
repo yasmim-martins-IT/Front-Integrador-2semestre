@@ -13,7 +13,7 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
-} from 'recharts';
+} from 'recharts'; //bibliotecas utilizadas para pegar os gráficos
 import styles from './Cards.module.css';
 
 const blue = '#3A9EDD';
@@ -21,6 +21,7 @@ const blue_strong = '#428CE2';
 const black = '#000';
 
 export function ChartCard({ title, type = 'line', data }) {
+  // Componente com cards de graficos para a demonstração de dados
   const chartData = data || [
     { name: 'Jan', value: 30 },
     { name: 'Feb', value: 20 },

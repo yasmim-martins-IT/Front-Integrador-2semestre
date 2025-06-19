@@ -11,9 +11,11 @@ import { RiProgress7Line } from "react-icons/ri";
 import nuvem from '../assets/nuvem.svg'
 export function Aside(){
     return(
+        // elemento principal <aside> do código
         <aside className={styles.container}>
            <header>
                 <div className= {styles.containerUsuario}>
+                    {/* foto do logo da smartcity*/}
                     <Link to={''}>
                     <img className={styles.fotoUsuario} src={logo}/></Link>
                 </div>
@@ -21,6 +23,7 @@ export function Aside(){
            </header>
            <section className={styles.containerBotoes}>
              <div className={styles.links_container}>
+                {/* Links de navegação e seus icones */}
 
                     <div className={styles.container_icons}>
                         <ImDroplet className={styles.icone} size={30} />
@@ -45,6 +48,7 @@ export function Aside(){
                 </div>
                 
            </section>
+           {/* Imagem decorativa de nuvem */}
            <div className={styles.containerImagem}><img className={styles.nuvem} src={nuvem} alt="nuvem" height={250} width={200} /></div>
            
         </aside>

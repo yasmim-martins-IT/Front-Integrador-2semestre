@@ -1,3 +1,4 @@
+/*------- Configurações gerais --------*/
 .header {
   background-color:#3b8ee4 ;
   display: flex;
@@ -9,6 +10,7 @@
   position: relative;
 }
 
+/*------- Configurações de alinhamento --------*/
 .container {
   position: absolute;
   left: 55%;
@@ -19,7 +21,7 @@
   justify-content: center;
 }
 
-
+/*------- onda de nuvem no header --------*/
 .footer_wave {
   position: absolute;
   bottom: 0;

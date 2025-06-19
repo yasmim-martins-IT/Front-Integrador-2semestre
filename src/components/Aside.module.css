@@ -1,3 +1,4 @@
+/*----- Alinhamento e configurações globais  -----*/
 .container {
   border: 2px solid #3b8ee4;
   border-radius: 10px;
@@ -10,13 +11,8 @@
   text-align: center;
 }
 
-.fotoUsuario {
-  width: 200px;
-  height: 200px;
-  border: 2px solid var(--dark-strong-blue);
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
+
+/*------- Configurações do botão --------*/
 
 .containerBotoes {
   display: flex;
@@ -43,12 +39,19 @@
   background-color: #e6f0fa;
 }
 
+/*------- Configurações dos links de navegação --------*/
 .links_container {
   display: flex;
   flex-direction: row;
   gap: 10px; /* controla o espaço entre ícones e links */
 }
+.container_links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 
+/*------- Configurações dos icones--------*/
 .container_icons {
   display: flex;
   flex-direction: column;
@@ -61,15 +64,18 @@
   cursor: pointer;
 }
 
-.container_links {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
+/*------- Configurações de imagem --------*/
 
 .containerImagem {
   padding-top: 25px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+}
+.fotoUsuario {
+  width: 200px;
+  height: 200px;
+  border: 2px solid var(--dark-strong-blue);
+  border-radius: 10px;
+  margin-bottom: 20px;
 }

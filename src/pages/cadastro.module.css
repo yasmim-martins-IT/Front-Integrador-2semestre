@@ -1,3 +1,4 @@
+/*----- Alinhamento e configurações de grid  -----*/
 .container {
   padding: 4rem;
   max-width: 600px;
@@ -7,12 +8,15 @@
 
 }
 
+/*------- Configurações de texto --------*/
 .title {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   text-align: center;
   color: #1f2937;
 }
+
+/*------- Configurações do formulário --------*/
 
 .form {
   display: flex;
@@ -42,6 +46,7 @@ select{
   margin-top: 0.25rem;
 }
 
+/*------- Configurações do botão --------*/
 button {
   background-color:  #007bff;
   color: white;
@@ -58,15 +63,16 @@ button:hover {
   border: solid , 1px ,  #007bff;
   color: black;
 }
+.botaoContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+/*------- Mensagem de Erro ou de envio com Sucesso --------*/
 .mensagem {
   margin-top: 1rem;
   font-size: 0.9rem;
   text-align: center;
   color: red;
-}
-.botaoContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }

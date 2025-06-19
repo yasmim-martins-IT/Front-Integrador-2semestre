@@ -1,14 +1,7 @@
+/*----- Alinhamento e configurações de grid  -----*/
 .container {
   padding: 20px;
 }
-
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-
-
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr; /* Mobile: uma coluna */
@@ -22,6 +15,13 @@ h1 {
   gap: 24px;
 }
 
+/*-------- Configurações de texto --------- */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/*----- Cards ----- */
 .card {
   background-color: #f8f9fa;
   padding: 24px;
@@ -47,6 +47,8 @@ h1 {
   font-size: 1rem; /* texto maior */
 }
 
+/*-------- Configurações dos graficos--------- */
+
 .graficos {
   display: flex;
   flex-wrap: wrap;
@@ -58,6 +60,8 @@ h1 {
 .graficoLine {
   margin-top: 20px;
 }
+
+/*-------- Configurações dos filtros--------- */
 .filtros {
   display: flex;
   gap: 1rem;

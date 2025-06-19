@@ -1,9 +1,4 @@
-.texto {
-    width: 500px;
-    justify-items: center;
-    align-content: center;
-    font-size: 17px;
-}
+/*----- Alinhamento   -----*/
 main{
     align-items: center;
     justify-content: center;
@@ -21,4 +16,13 @@ main{
     
     
 }
+
+/*-------- Configurações de texto --------- */
+.texto {
+    width: 500px;
+    justify-items: center;
+    align-content: center;
+    font-size: 17px;
+}
+
 

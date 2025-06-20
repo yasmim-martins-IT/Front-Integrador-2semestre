@@ -1,12 +1,48 @@
-# React + Vite
+Olá Professor(a) que está responsável pela a avaliação do meu projeto integrador do segundo semestre
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Para iniciar a aplicação deve dar git clone nos repósitorio publico abaixo para ter acesso a API (também pode ser encontrado na documentação do front-end )
 
-Currently, two official plugins are available:
+link : https://github.com/yasmim-martins-IT/Integrador-2Semestre
+--------------------------------------------------------------------------------------------------
+INICIANDO O BACK-END :
+clone o back-end em uma pasta
+após clonagem acesse a pasta integrador-2semestre dentro do VScode
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+abra o terminal do vscode
 
-## Expanding the ESLint configuration
+crie uma venv
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+"python -m venv venv"
+
+startando a venv
+
+"venv/scripts/activate"
+
+após isso instale as dependencias do projeto
+
+"pip install -r requiriments.txt"
+
+Após a instalação inicie o servidos back-end de maneira local
+
+"python manage.py runserver"
+
+em caso de duvidas acesse a documentação na api atráves desse End-Point :
+------------------------------------------------------------------------------------------------
+
+Com o back-end pronto podemos começar a corrigir o Front-end
+
+Abra o terminal do Vscode
+
+instale as dependencias
+
+"npm install"
+
+Após a instalação inicie o front-End
+
+"npm run dev"
+
+Para ver as funcionalidades e as telas do figma acesse o documento "documentação integrador.pdf" na pasta raiz do projeto
+
+Boa correção e piedade profs!!!
+
+
